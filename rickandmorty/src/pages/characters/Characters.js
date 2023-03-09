@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import CardCharacter from '../../components/cardCharacter/CardCharacter'
 
 const Characters = () => {
     const url = 'https://rickandmortyapi.com/api'
@@ -21,13 +22,13 @@ const Characters = () => {
 
   return (
     <div>
-      <ul>
+      <main>
         {
-            characters.map((item, i) => <li key={i}> 
-            {item.name} 
-            </li>)
+            characters.map((item) =>
+              <CardCharacter key={item.id} character={item} />
+            )
         }
-      </ul>
+      </main>
     </div>
   )
 }
