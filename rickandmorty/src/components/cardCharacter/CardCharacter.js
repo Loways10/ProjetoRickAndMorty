@@ -8,7 +8,7 @@ const CardCharacter = ({character}) => {
         navigate(`/character/${id}`)
     }
   return (
-    <div onClick={() => seeMore(character.id)}>
+    <div onClick={() => seeMore(character.id)} className='character-full-card'>
       <div className='image'>
         <img src={character.image} alt="profile-pic" />
       </div>

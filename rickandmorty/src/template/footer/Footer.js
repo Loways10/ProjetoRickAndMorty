@@ -1,10 +1,11 @@
 import React from 'react'
+import './index.css'
 
 const Footer = () => {
   return (
-    <div>
+    <footer>
       Akio Hashimoto
-    </div>
+    </footer>
   )
 }
 

@@ -1,0 +1,15 @@
+.card-characters{
+    width: 100%;
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    align-content: stretch;
+    text-align: center;
+    gap: 10px;
+}
+
+.card-characters .character-full-card{
+    border: 2px solid rgb(2, 71, 24);
+    border-radius: 5%;
+}
