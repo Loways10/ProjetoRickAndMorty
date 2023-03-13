@@ -14,7 +14,7 @@ const CardCharacter = ({character}) => {
       </div>
       <div className="info">
         <h3>{character.name}</h3>
-        <p>{character.status}</p>
+        <p style={{backgroundColor: character.status==="unknown" ? 'orange' : character.status==="Alive" ? 'green' : 'red'}}>{character.status}</p>
         <p>{character.gender}</p>
       </div>
     </div>

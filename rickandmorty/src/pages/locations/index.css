@@ -1,0 +1,22 @@
+.planets{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: stretch;
+    text-align: center;
+    padding: 20px 0;
+    gap: 10px;
+}
+
+.planets div{
+    border: 1px solid green;
+    border-radius: 10px;
+}
+
+.planets div h3{
+    color: white;
+}
+
+.planets div p{
+    color: white;
+}

@@ -4,8 +4,8 @@ const CardLocation = ({location}) => {
   return (
     <div>
       <h3>{location.name}</h3>
-      <p>{location.type}</p>
-      <p>{location.dimension}</p>
+      <p>Tipo: {location.type}</p>
+      <p>Dimensão: {location.dimension}</p>
     </div>
   )
 }

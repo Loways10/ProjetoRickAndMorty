@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import CardEpisode from '../../components/cardEpisodes/CardEpisode'
+import './index.css'
 
 const Episodes = () => {
   const url = 'https://rickandmortyapi.com/api'
@@ -22,7 +23,7 @@ const Episodes = () => {
 
   return (
     <div>
-      <main>
+      <main className='episodes'>
         {
           episodes.map((item) => 
             <CardEpisode key={item.id} episode={item}/>

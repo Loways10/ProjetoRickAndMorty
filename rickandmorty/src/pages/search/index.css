@@ -1,0 +1,16 @@
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+}
+.character{
+    width: 100%;
+    padding: 20px 0;
+    margin: 20px 0 0 0;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+

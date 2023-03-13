@@ -1,3 +1,4 @@
+import './index.css'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
@@ -20,18 +21,18 @@ const Character = () => {
       }
       http()
   }, [])
-    
+
   return (
-    <div>
+    <div className='complete-card'>
       <h1>{character.name}</h1>
       <div className='image'>
         <img src={character.image} alt="profile-pic" />
       </div>
       <div className="info">
-        <p>{character.status}</p>
-        <p>{character.gender}</p>
-        <p>{character.species}</p>
-        <p>{character?.origin?.name}</p>
+        <p style={{backgroundColor: character.status==="unknown" ? 'orange' : character.status==="Alive" ? 'green' : 'red'}}>Status: {character.status}</p>
+        <p>Sex: {character.gender}</p>
+        <p>Species: {character.species}</p>
+        <p>Origin: {character?.origin?.name}</p>
       </div>
     </div>
   )

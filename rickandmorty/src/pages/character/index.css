@@ -1,0 +1,21 @@
+.complete-card{
+    width: 100%;
+    padding: 20px 0;
+    margin: 20px 0 0 0;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.complete-card h1{
+    text-decoration: underline;
+}
+
+.complete-card .image img{
+    border-radius: 5px;
+}
+
+.info {
+    font-size: 20px;
+    font-weight: bold;
+}

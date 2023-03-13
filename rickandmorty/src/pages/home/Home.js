@@ -25,7 +25,7 @@ const Home = () => {
   return (
     <main>
       <div>
-        <h1>Personagens</h1>
+        <h1>Working...</h1>
       </div>
       <section>
         {/* {
