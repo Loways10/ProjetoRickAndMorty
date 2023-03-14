@@ -2,13 +2,14 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-content: stretch;
     text-align: center;
+    align-content: stretch;
     padding: 20px 0;
     gap: 10px;
 }
 
 .planets div{
+    background-color: black;
     border: 1px solid green;
     border-radius: 10px;
 }
@@ -19,4 +20,10 @@
 
 .planets div p{
     color: white;
+}
+
+.page-buttons{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }

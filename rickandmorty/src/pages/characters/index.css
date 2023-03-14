@@ -1,3 +1,8 @@
+.characters{
+    width: 100%;
+    padding: 50px 0;
+}
+
 .card-characters{
     width: 80%;
     margin: auto;

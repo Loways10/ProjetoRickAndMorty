@@ -1,0 +1,46 @@
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.character-home{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    color: white;
+}
+
+.character-home div{
+    padding: 10%;
+    background-color: black;
+    border: 2px solid red;
+}
+
+.location-home{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    color: white;
+}
+
+.location-home div{
+    padding: 10%;
+    background-color: black;
+    border: 2px solid red;
+}
+
+.episode-home{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    color: white;
+}
+
+.episode-home div{
+    padding: 10%;
+    background-color: black;
+    border: 2px solid red;
+    margin-bottom: 30px;
+}
+

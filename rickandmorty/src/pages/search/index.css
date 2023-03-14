@@ -1,3 +1,13 @@
+.search{
+    text-align: center;
+    color: white;
+}
+
+h1{
+    text-decoration: underline;
+    background-color: rgba(0, 128, 0, 0.597);
+}
+
 h2{
     text-align: center;
     text-transform: uppercase;
@@ -5,6 +15,7 @@ h2{
     color: white;
     text-decoration: underline;
 }
+
 .character{
     width: 100%;
     padding: 20px 0;
@@ -12,5 +23,7 @@ h2{
     text-align: center;
     color: white;
     background-color: black;
+
 }
+
 

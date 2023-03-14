@@ -15,7 +15,26 @@ header{
     font-weight: bold;
 }
 
+header .search-bar{
+    padding-left: 20%;
+    display: flex;
+    gap: 5px;
+}
+
+header .search-bar input{
+    border-radius: 5px;
+    border: 0;
+}
+
+header .search-bar button{
+    border-radius: 5px;
+    border: 0;
+    background-color: transparent;
+}
+
 a{
+    font-weight: bold;
+    font-size: 25px;
     text-decoration: none;
     color: white;
 }

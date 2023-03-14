@@ -2,29 +2,47 @@ import './index.css'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import CardCharacter from '../../components/cardCharacter/CardCharacter'
+import CardLocation from '../../components/cardLocation/CardLocation'
+import CardEpisode from '../../components/cardEpisodes/CardEpisode'
 
 const Search = () => {
     const { search } = useParams()
     const url = 'https://rickandmortyapi.com/api'
     const [character, setCharacter] = useState([])
+    const [episode, setEpisode] = useState([])
+    const [location, setLocation] = useState([])
 
     useEffect(() => {
         const requests = async () => {
-            const response = await fetch(`${url}/character`)
-            const data = await response.json()
-            const lista = data.results
-            const array = lista.filter((item) => item.name.toLowerCase().includes(search.toLowerCase()))
+            let response = await fetch(`${url}/character`)
+            let data = await response.json()
+            const list = data.results
+            const array = list.filter((item) => item.name.toLowerCase().includes(search.toLowerCase()))
             console.log(array)
-            
             setCharacter(array)
+
+            response = await fetch(`${url}/episode`)
+            data = await response.json()
+            const list2 = data.results
+            const arrayEpisodes = list2.filter((item) => item.name.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
+            console.log(arrayEpisodes)
+            setEpisode(arrayEpisodes)
+
+            response = await fetch(`${url}/location`)
+            data = await response.json()
+            const list3 = data.results
+            const arrayLocation = list3.filter((item) => item.name.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
+            console.log(arrayLocation)
+            setLocation(arrayLocation)
         }
         requests()
     }, [search])
 
   return (
-    <div>
+    <div className='search'>
       <h2>{search}</h2>
-      <main className="character">
+      <h1>Character</h1>
+      <div className="character">
         {
             character.length > 0
             ?
@@ -38,7 +56,39 @@ const Search = () => {
             :
                 <p className='not-found'>404, Not Found</p>
         }
-      </main>
+      </div>
+      <h1>Location</h1>
+      <div className='location'>
+            {
+                location.length > 0
+                ?
+                    <div className="card-location">
+                        {
+                            location.map((item) => (
+                                <CardLocation key={item.id} location={item} />
+                            ))
+                        }
+                    </div>
+                :
+                    <p className="list-notfound">404, Not Found</p>
+            }
+        </div>
+        <h1>Episode</h1>
+        <div className='episode'>
+            {
+                episode.length > 0
+                ?
+                    <div className="card-episode">
+                        {
+                            episode.map((item) => (
+                                <CardEpisode key={item.id} episode={item} />
+                            ))
+                        }
+                    </div>
+                :
+                    <p className="list-notfound">404, Not Found</p>
+            }
+        </div>
     </div>
   )
 }
